@@ -59,4 +59,4 @@ class jobtitlepage{
 
 const jobtitle = new jobtitlepage()
 
-export default jobtitle
+export default jobtitle 
