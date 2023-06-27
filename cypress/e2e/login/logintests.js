@@ -1,14 +1,14 @@
-import { Given, Then } from "cypress-cucumber-preprocessor/steps";
-import { Given, Then } from "cypress-cucumber-preprocessor/steps";
+import { Given, Then, When } from "cypress-cucumber-preprocessor/steps";
 import login from '../../pageobjects/loginhrm.po';
-import dashboard from '../../pageobjects/dashboard.po';
+import Dashboard from "../../pageobjects/dashboard.po";
+
 
 
 Given('User launch the application', () => {
   cy.visit('/')
 })
 
-when(`User Enter Valid username {string} and Valid password {string}`, (username, password) => {
+When(`User Enter Valid username {string} and Valid password {string}`, (username, password) => {
     //cy.title().should('include', title)
 
     cy.get(login.usernameinput()).type(username);
@@ -20,6 +20,8 @@ when('User clicks on login Button', () => {
 })
 Then('User should be navigate to Dashboard page', () => {
 
-  
+  cy.url("/web/index.php/dashboard/index")
+  cy.contains(Dashboard.dashboardPage()).should("be.visible");
+  cy.contains(Dashboard.Adminmenu()).click();
 
 })

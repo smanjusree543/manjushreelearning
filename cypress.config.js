@@ -12,6 +12,11 @@ module.exports = defineConfig({
     "defaultCommandTimeout":20000,
     "vedio":"true",
     //"defaultCommandTimeout":20000,
+    env:{
+      "username": "Admin",
+      "password": "admin123"
+    },
+    
     
     setupNodeEvents(on, config) {
       require('cypress-mochawesome-reporter/plugin')(on); 
@@ -21,3 +26,4 @@ module.exports = defineConfig({
     },
   },
 });
+

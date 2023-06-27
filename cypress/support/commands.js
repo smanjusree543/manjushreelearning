@@ -23,18 +23,18 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
-import jobtitle from '../pageobjects/jobtitle.po'
-Cypress.Commands.add('AddJobTittle', (tittle, description) => { 
+// import jobtitle from '../pageobjects/jobtitle.po'
+// Cypress.Commands.add('AddJobTittle', (tittle, description) => { 
 
 
-      cy.contains(jobtitle.submenu()).click()
-      cy.contains(jobtitle.jobtitlebutton()).click()
-      cy.get(jobtitle.addbutton()).click()
-      //let r = (Math.random() + 1).toString(36).substring(7);
-      cy.get(jobtitle.jobtitleinput()).eq(0).type(tittle)
-      cy.get(jobtitle.jobtitledescribtion()).eq(0).type(description)
-      cy.get(jobtitle.submit()).click()
-})
+//       cy.contains(jobtitle.submenu()).click()
+//       cy.contains(jobtitle.jobtitlebutton()).click()
+//       cy.get(jobtitle.addbutton()).click()
+//       //let r = (Math.random() + 1).toString(36).substring(7);
+//       cy.get(jobtitle.jobtitleinput()).eq(0).type(tittle)
+//       cy.get(jobtitle.jobtitledescribtion()).eq(0).type(description)
+//       cy.get(jobtitle.submit()).click()
+// })
 
 Cypress.Commands.add('login', (username, password) => { 
   
