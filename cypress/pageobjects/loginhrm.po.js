@@ -17,6 +17,6 @@ class loginpagehrm{
    cy.get(this.submit()).click();
 } 
 }
-const login=new loginpagehrm()
+const login= new loginpagehrm()
 export default login
     
