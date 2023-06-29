@@ -76,7 +76,7 @@ describe('validate adding job tittle', () => {
    cy.get(employeestatus.addemployeestatusinput()).type("kjhhsd")
   
   })
-  
+  //arun
 })
   
   
